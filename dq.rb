@@ -5,22 +5,22 @@
 class Dq < Formula
   desc "Query CSV, JSON, Avro, and Parquet files from the command line"
   homepage "https://github.com/razeghi71/dq"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/razeghi71/dq/releases/download/v0.1.0/dq_0.1.0_darwin_amd64.tar.gz"
-      sha256 "446c559463b6a6714bacbc3f4e29973f5aca821bd88c7ea289579fd29c7eb767"
+      url "https://github.com/razeghi71/dq/releases/download/v0.2.0/dq_0.2.0_darwin_amd64.tar.gz"
+      sha256 "ef63fa7291684ef0e56fc0ce28e9159d7d6afa68ee4ac1a472ae4fa4ec24d717"
 
-      def install
+      define_method(:install) do
         bin.install "dq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/razeghi71/dq/releases/download/v0.1.0/dq_0.1.0_darwin_arm64.tar.gz"
-      sha256 "16df06a853c9414bacfc27ef1cb8b7582670d64a5e055081b80e782d440d2e77"
+      url "https://github.com/razeghi71/dq/releases/download/v0.2.0/dq_0.2.0_darwin_arm64.tar.gz"
+      sha256 "39858750134df3f8b8fef97c9daffd7e273547c157683fb59034dc1c90530202"
 
-      def install
+      define_method(:install) do
         bin.install "dq"
       end
     end
@@ -28,16 +28,16 @@ class Dq < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/razeghi71/dq/releases/download/v0.1.0/dq_0.1.0_linux_amd64.tar.gz"
-      sha256 "65bd2284931f0e444f46f0febb19304f2fba1f4c432cc8f7de7b541f292ed3e0"
-      def install
+      url "https://github.com/razeghi71/dq/releases/download/v0.2.0/dq_0.2.0_linux_amd64.tar.gz"
+      sha256 "ad069f1a2f9e22309fd6ec3ebf969f804c2ecd6bbd20753838a9b7bbb46a49f0"
+      define_method(:install) do
         bin.install "dq"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/razeghi71/dq/releases/download/v0.1.0/dq_0.1.0_linux_arm64.tar.gz"
-      sha256 "78f74cae11a109171a99fa54aeb72c8304e206327ee99247a06d2e3414b53652"
-      def install
+      url "https://github.com/razeghi71/dq/releases/download/v0.2.0/dq_0.2.0_linux_arm64.tar.gz"
+      sha256 "eb7297171253ea97e559242aff281ae887f28173e48ee90c30fed4c4c6dcc6c9"
+      define_method(:install) do
         bin.install "dq"
       end
     end
