@@ -5,20 +5,20 @@
 class Dq < Formula
   desc "Query CSV, JSON, Avro, and Parquet files from the command line"
   homepage "https://github.com/razeghi71/dq"
-  version "0.22.0"
+  version "0.23.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/razeghi71/dq/releases/download/v0.22.0/dq_0.22.0_darwin_amd64.tar.gz"
-      sha256 "0ed64764df33a2902e3a4a3dcbf2d47b7d35b5f63c9fff31e631566c746a40c3"
+      url "https://github.com/razeghi71/dq/releases/download/v0.23.0/dq_0.23.0_darwin_amd64.tar.gz"
+      sha256 "d38bc9a51a2dde298479ead1e4f295104536123b755b62690c91fba3b0ed9ebc"
 
       define_method(:install) do
         bin.install "dq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/razeghi71/dq/releases/download/v0.22.0/dq_0.22.0_darwin_arm64.tar.gz"
-      sha256 "4987dacf35573ba57837ef8dbd33d3fe119b9737caa87cbea27458adbcaae9cb"
+      url "https://github.com/razeghi71/dq/releases/download/v0.23.0/dq_0.23.0_darwin_arm64.tar.gz"
+      sha256 "326e464d87bde447071546fce82c5515b26ff15ff3a7043c82d7761665ecfcaf"
 
       define_method(:install) do
         bin.install "dq"
@@ -28,15 +28,15 @@ class Dq < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/razeghi71/dq/releases/download/v0.22.0/dq_0.22.0_linux_amd64.tar.gz"
-      sha256 "d6318883e16b158f18ed93d6cef0c853c0954abe99d6f559425fde86f93088dc"
+      url "https://github.com/razeghi71/dq/releases/download/v0.23.0/dq_0.23.0_linux_amd64.tar.gz"
+      sha256 "5d0d94c322456d576257dee26477f2817e519bb093772b224d6178b35e30b040"
       define_method(:install) do
         bin.install "dq"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/razeghi71/dq/releases/download/v0.22.0/dq_0.22.0_linux_arm64.tar.gz"
-      sha256 "7d53089ae12416dcc7929353dd0b0f6b761ba8a0fbf7a27a445775ac059c78c8"
+      url "https://github.com/razeghi71/dq/releases/download/v0.23.0/dq_0.23.0_linux_arm64.tar.gz"
+      sha256 "4b0aa1ec476c61e5e1d22daa625bb3c8541a46aedd674950f1a70c611541c2f0"
       define_method(:install) do
         bin.install "dq"
       end
